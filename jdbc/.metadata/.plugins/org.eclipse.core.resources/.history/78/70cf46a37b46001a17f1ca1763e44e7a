@@ -1,0 +1,13 @@
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+
+public class q1_3 {
+	
+	static Object readFromFile(String filename) throws Exception { 
+		FileInputStream fin = new FileInputStream(filename); 
+		ObjectInputStream oin = new ObjectInputStream(fin);
+		Object object = oin.readObject(); 
+		oin.close(); 
+		return object; 
+		}
+}
